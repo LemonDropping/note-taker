@@ -10,10 +10,10 @@ app.listen(PORT, () => {
 
 inquirer.prompt ([
     {
-        type:
+        type: 
         name:
         message:
 
     }
-])
+]);
 
