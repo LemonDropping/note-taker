@@ -1,9 +1,9 @@
 // declaring my variables and requiring my npm packages
 const express = require('express');
-// error in these 2 lines of code below this
 const routeApi = require('./develop/routes/routeAPI');
 const routeHtml = require('./develop/routes/routeHTML')
 const path = require('path');
+// const fs = require('fs')
 
 const app = express();
 // sets default port variable to 3001 
