@@ -13,20 +13,20 @@ app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, './public/index.html'));
+    res.sendFile(path.join(__dirname, 'develop', 'public', 'index.html'));
   });
   
 app.get('/notes', (req, res) => {
-    res.sendFile (__dirname, './public/notes.html');
+    res.sendFile(path.join(__dirname, '/develop/public/notes.html'));
 })
 
-app.use(express.static('./develop/public'));
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/api', routeApi)
 app.use('/', routeHtml);
 
 app.listen(PORT, () => {
-    console.log('listening on PORT ${3001}')
+    console.log(`listening on http://localhost:${PORT}}`)
 });
 
 // inquirer.prompt ([
