@@ -5,7 +5,7 @@ router.get('/routes/notes.js', (req, res) => {
     res.json(notes);
 });
 
-router.post('/notes', (req, res) => {
+router.post('/routes/notes.js', (req, res) => {
     const newNote = req.body;
     notes.push(newNote)
     res.json = (newNote)

@@ -1,9 +1,9 @@
 // declaring my variables and requiring my npm packages
 const express = require('express');
 const routeApi = require('./routes/routeAPI');
-const routeHtml = require('./routes/routeHTML')
+const routeHtml = require('./routes/routeHTML');
+const notes = require ('./routes/notes.js');
 const path = require('path');
-// const fs = require('fs')
 
 const app = express();
 // sets default port variable to 3001 
@@ -22,9 +22,9 @@ app.get('/notes', (req, res) => {
 
 app.use(express.static(path.join(__dirname, '/public')));
 
-app.use('/api', routeApi)
+app.use('/api', routeApi);
 app.use('/', routeHtml);
-
+app.use('/', notes);
 app.listen(PORT, () => {
     console.log(`listening on http://localhost:${PORT}}`)
 });
