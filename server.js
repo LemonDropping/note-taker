@@ -1,7 +1,7 @@
 // declaring my variables and requiring my npm packages
 const express = require('express');
-const routeApi = require('./develop/routes/routeAPI');
-const routeHtml = require('./develop/routes/routeHTML')
+const routeApi = require('./routes/routeAPI');
+const routeHtml = require('./routes/routeHTML')
 const path = require('path');
 // const fs = require('fs')
 
@@ -13,14 +13,14 @@ app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'develop', 'public', 'index.html'));
+    res.sendFile(path.join(__dirname, ''));
   });
   
 app.get('/notes', (req, res) => {
     res.sendFile(path.join(__dirname, '/develop/public/notes.html'));
 })
 
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, '/develop/public/index.html')));
 
 app.use('/api', routeApi)
 app.use('/', routeHtml);
