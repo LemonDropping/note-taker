@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const notes = require('./routeAPI');
 
-router.get('/notes', (req, res) => {
+router.get('/routes/notes.js', (req, res) => {
     res.json(notes);
 });
 
