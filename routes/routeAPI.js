@@ -1,14 +1,21 @@
-const router = require('express').Router();
-const notes = require('./routeAPI');
+const express = require('express');
+const router = express.Router();
+const { v4: uuidv4 } = require('uuid');
 
-router.get('/routes/notes.js', (req, res) => {
-    res.json(notes);
-});
-
-router.post('/routes/notes.js', (req, res) => {
+const app = express();
+app.post('/db/db.json', (req, res) => {
     const newNote = req.body;
-    notes.push(newNote)
-    res.json = (newNote)
-});
+
+    newNote.id = uuidv4();
+
+    writeToFile('./db/db.json', newNote)
+        .then(() => {
+            res.json({ message: 'Note Created' });
+        })
+        .catch((err) => {
+            console.error(err);
+            res.status(500).json({ error: 'failed to create note' })
+        })
+})
 
 module.exports = router;
