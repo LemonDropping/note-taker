@@ -18,13 +18,13 @@ understanding of writing to a JSON file and using express.js to create the backe
 4. You will see that the note has been added to the left of the page with a trashcan delete icon to the right of the note title. 
 
     ```md
-    ![screenshot](images/note-screenshot-1.png)
+    ![screenshot1](images/note_screenshot_1.jpg)
 
-    ![screenshot](images/note-screenshot-2.png)
+    ![screenshot2](images/note_screenshot_2.jpg)
 
-    ![screenshot](images/note-screenshot-3.png)
+    ![screenshot3](images/note_screenshot_3.jpg)
 
-    ![screenshot](images/note-screenshot-4.png)
+    ![screenshot4](images/note_screenshot_4.jpg)
 
     ```
 
