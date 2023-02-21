@@ -1,25 +1,17 @@
-// dependencies
 const express = require('express');
 const path = require('path');
-
-// load express.js
 const app = express();
+const notesDb = require('./routes/notesRoute');
+const htmlFileRoute = require('./routes/htmlFileRoute');
 
-// mount middleware for json
+const PORT = process.env.PORT || 3001;
+
 app.use(express.json());
+app.use(express.static(path.join(__dirname, 'public')))
+app.use('/api/notes', notesDb);
+app.use('/', htmlFileRoute);
 
-// mount middleware for static files
-app.use(express.static(path.join(__dirname, 'public')));
+app.listen(PORT, () =>
+    console.log(`App listening at http://localhost:${PORT}`)
+);
 
-// mount middleware for api router
-app.use('/api/notes', require('./routes/notesRoute'));
-
-// mount middleware for html router
-app.use('/', require('./routes/htmlFileRoute'));
-
-// start server
-const PORT = process.env.PORT || 3000;
-
-app.listen(PORT, () => {
-    console.log(`listening on http://localhost:${PORT}}`)
-});
