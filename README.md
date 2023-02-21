@@ -18,13 +18,13 @@ understanding of writing to a JSON file and using express.js to create the backe
 4. You will see that the note has been added to the left of the page with a trashcan delete icon to the right of the note title. 
 
     ```md
-    ![screenshot](images/note-screenshot-1.png)
+    ![screenshot](./images/note-screenshot-1.png)
 
-    ![screenshot](images/note-screenshot-2.png)
+    ![screenshot](./images/note-screenshot-2.png)
 
-    ![screenshot](images/note-screenshot-3.png)
+    ![screenshot](./images/note-screenshot-3.png)
 
-    ![screenshot](images/note-screenshot-4.png)
+    ![screenshot](./images/note-screenshot-4.png)
 
     ```
 
@@ -43,4 +43,4 @@ understanding of writing to a JSON file and using express.js to create the backe
  - Used as a guide for deploying to Heroku.
 
 5. [Youtube](https://www.youtube.com/watch?v=DQk3zJlY-eE&t=84s&ab_channel=PedroTech)
- - Additional guidance for Heroku.
+ - Additional guidance for deployment to heroku
